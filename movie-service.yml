@@ -12,6 +12,12 @@ spring:
     hibernate.ddl-auto: update
     generate-ddl: true
     show-sql: true
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/AndreaJBV/230816-central-config-EB-C1/tree/main
+        enabled: false
 
 
 eureka:
