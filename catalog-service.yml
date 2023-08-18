@@ -4,6 +4,12 @@ server:
 spring:
   application:
     name: catalog-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/AndreaJBV/230816-central-config-EB-C1/tree/main
+        enabled: false
 
 eureka:
   client:
