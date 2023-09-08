@@ -19,7 +19,8 @@ spring:
       database: test
       port: 27017
   rabbitmq:
-   
+    username: LocalRabbitMQMessagingQueue
+    password: af3c4d5d01d790acc
     host: localhost
     port: 5672
 
