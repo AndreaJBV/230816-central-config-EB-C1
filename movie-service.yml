@@ -20,6 +20,15 @@ spring:
         git:
           uri: https://github.com/AndreaJBV/230816-central-config-EB-C1/tree/main
         enabled: false
+  rabbitmq:
+    username: LocalRabbitMQMessagingQueue
+    password: af3c4d5d01d790acc
+    host: localhost
+    port: 5672
+
+queue:
+  movie:
+    name: MovieQueue
 
 
 eureka:
