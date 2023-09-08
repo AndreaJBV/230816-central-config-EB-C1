@@ -13,6 +13,10 @@ spring:
           uri: https://github.com/AndreaJBV/230816-central-config-EB-C1/tree/main
         enabled: false
 
+queue:
+  movie:
+    name: MovieQueue
+
 eureka:
   client:
     register-with-eureka: true
