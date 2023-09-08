@@ -24,9 +24,9 @@ spring:
     host: localhost
     port: 5672
 
-  queue:
-    serie:
-      name: SerieQueue
+queue:
+  serie:
+    name: SerieQueue
 
 
 eureka:
