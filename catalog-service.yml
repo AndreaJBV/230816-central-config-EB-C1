@@ -37,7 +37,7 @@ queue:
     name: SerieQueue
 
 management:
-  healt:
+  health:
     circuitbreakers:
       enabled: true
 
