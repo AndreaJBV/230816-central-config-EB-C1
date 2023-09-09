@@ -17,12 +17,8 @@ spring:
       version: 4.0.2
   data:
     mongodb:
-      uri: mongodb://localhost:27017/catalog
-    username: root
-    password: root
-    authentication-database: admin
-    database: test
-    port: 27018
+      database: test
+      port: 27018
 
 queue:
   movie:
