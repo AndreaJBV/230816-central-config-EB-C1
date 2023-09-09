@@ -60,7 +60,7 @@ retry:
       waitDuration: 1000
       maxAttempts: 2
       retryExceptions:
-        - feign.FeignException$InternalServerError
+        - feign.RetryableException
 
 
 eureka:
