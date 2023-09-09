@@ -12,6 +12,17 @@ spring:
         git:
           uri: https://github.com/AndreaJBV/230816-central-config-EB-C1/tree/main
         enabled: false
+  mongodb:
+    embedded:
+      version: 4.0.2
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/catalog
+    username: root
+    password: root
+    authentication-database: admin
+    database: test
+    port: 27018
 
 queue:
   movie:
