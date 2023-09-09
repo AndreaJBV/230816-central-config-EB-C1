@@ -12,7 +12,7 @@ spring:
         git:
           uri: https://github.com/AndreaJBV/230816-central-config-EB-C1/tree/main
         enabled: false
-   mongodb:
+  mongodb:
     embedded:
       version: 4.0.2
   data:
@@ -28,8 +28,8 @@ spring:
 queue:
   movie:
     name: MovieQueue
-  # serie:
-  #   name: 'SerieQueue'
+  serie:
+    name: SerieQueue
 
 
 eureka:
