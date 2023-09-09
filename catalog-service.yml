@@ -31,6 +31,32 @@ queue:
   serie:
     name: SerieQueue
 
+management:
+  healt:
+    circuitbreakers:
+      enabled: true
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      students:
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 4
+        failureRateThreshold: 50
+        waitOurationInOpenState: 15000
+        permittedNumberOfCallsInHalfOpenState: 3
+        registerHealthIndicator: true
+        allowHealthIndicatorToFail: false
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+
+retry:
+  instances:
+    students:
+      waitDuration: 1000
+      maxAttempts: 2
+      retryExceptions:
+        - feign.FeignException$InternalServerError
+
 
 eureka:
   client:
