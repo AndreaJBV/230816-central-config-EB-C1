@@ -27,9 +27,9 @@ spring:
 
 queue:
   movie:
-    name: 'MovieQueue'
-  serie:
-    name: 'SerieQueue'
+    name: MovieQueue
+  # serie:
+  #   name: 'SerieQueue'
 
 
 eureka:
