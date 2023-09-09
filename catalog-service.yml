@@ -24,7 +24,12 @@ spring:
     password: af3c4d5d01d790acc
     host: localhost
     port: 5672
-
+    
+queue:
+  movie:
+    name: MovieQueue
+  serie:
+    name: SerieQueue
 
 
 eureka:
