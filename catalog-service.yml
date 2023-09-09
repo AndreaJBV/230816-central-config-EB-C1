@@ -12,9 +12,7 @@ spring:
         git:
           uri: https://github.com/AndreaJBV/230816-central-config-EB-C1/tree/main
         enabled: false
-  mongodb:
-    embedded:
-      version: 4.0.2
+ 
   data:
     mongodb:
       database: test
