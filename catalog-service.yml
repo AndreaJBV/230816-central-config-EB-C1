@@ -44,7 +44,16 @@ management:
 resilience4j:
   circuitbreaker:
     instances:
-      students:
+      moviesSave:
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 4
+        failureRateThreshold: 50
+        waitDurationInOpenState: 15000
+        permittedNumberOfCallsInHalfOpenState: 3
+        registerHealthIndicator: true
+        allowHealthIndicatorToFail: false
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+      moviesGenre:
         slidingWindowType: COUNT_BASED
         slidingWindowSize: 4
         failureRateThreshold: 50
@@ -56,11 +65,18 @@ resilience4j:
 
 retry:
   instances:
-    students:
+    moviesSave:
       waitDuration: 1000
       maxAttempts: 2
       retryExceptions:
         - feign.FeignException$InternalServerError
+    moviesGenre:
+      waitDuration: 1000
+      maxAttempts: 2
+      retryExceptions:
+        - feign.FeignException$InternalServerError
+
+
 
 
 eureka:
