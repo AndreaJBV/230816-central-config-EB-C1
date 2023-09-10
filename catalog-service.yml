@@ -62,6 +62,24 @@ resilience4j:
         registerHealthIndicator: true
         allowHealthIndicatorToFail: false
         automaticTransitionFromOpenToHalfOpenEnabled: true
+      seriesSave:
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 4
+        failureRateThreshold: 50
+        waitDurationInOpenState: 15000
+        permittedNumberOfCallsInHalfOpenState: 3
+        registerHealthIndicator: true
+        allowHealthIndicatorToFail: false
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+      serieGenre:
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 4
+        failureRateThreshold: 50
+        waitDurationInOpenState: 15000
+        permittedNumberOfCallsInHalfOpenState: 3
+        registerHealthIndicator: true
+        allowHealthIndicatorToFail: false
+        automaticTransitionFromOpenToHalfOpenEnabled: true
 
 retry:
   instances:
@@ -71,6 +89,16 @@ retry:
       retryExceptions:
         - feign.FeignException$InternalServerError
     moviesGenre:
+      waitDuration: 1000
+      maxAttempts: 2
+      retryExceptions:
+        - feign.FeignException$InternalServerError
+    seriesSave:
+      waitDuration: 1000
+      maxAttempts: 2
+      retryExceptions:
+        - feign.FeignException$InternalServerError
+    seriesGenre:
       waitDuration: 1000
       maxAttempts: 2
       retryExceptions:
